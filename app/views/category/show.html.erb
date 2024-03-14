@@ -13,7 +13,7 @@
       <p class="card-text"><%= @product.description %></p>
       <p class="card-text">Price: <%= number_to_currency(@product.price) %></p>
       <p class="card-text">Category: <%= @product.category.name %></p>
-      <p class="card-text">Dealer: <%= @product.dealer.name %></p>
+      <p class="card-text">Dealer: <%= Dealer.find(@product.dealer_id).name%></p>
     </div>
   </div>
 </div>

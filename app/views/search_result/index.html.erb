@@ -1,0 +1,24 @@
+<div class="container mt-5">
+    <h1><%= @message%></h1>
+  <div class="row">
+    <% @pokemons.each do |pokemon| %>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><%= pokemon.name %></h5>
+            <p class="card-text">Type: <%= pokemon.category.name %></p>
+            <p class="card-text">Description: <%= pokemon.description %></p>
+            <p class="card-text">Price: <%= number_to_currency(pokemon.price) %></p>
+            <% if pokemon.price > 200 %>
+            <p class="card-text">Kind: Expensive</p>
+          <% else %>
+            <p class="card-text">Kind: Affordable</p>
+          <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
