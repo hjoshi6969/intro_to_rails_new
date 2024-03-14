@@ -1,2 +1,6 @@
+# app/models/category.rb
 class Category < ApplicationRecord
-end
+    # Validations
+    validates :name, presence: true, length: { maximum: 50 }
+  end
+  
