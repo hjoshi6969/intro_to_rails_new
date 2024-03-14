@@ -1,0 +1,22 @@
+<br><br><br>
+<div class='container'>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/catogory/index">Home</a></li>
+    
+  </ol>
+</nav>
+
+<div class="row">
+    <% @categories.each do |category| %>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><%= category.name %></h5>
+            <a class='btn btn-info' href='/catogory/list?id=<%= category.id %>'>See Products</a>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

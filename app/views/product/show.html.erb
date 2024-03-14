@@ -1,0 +1,11 @@
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title"><%= @product.name %></h5>
+      <p class="card-text"><%= @product.description %></p>
+      <p class="card-text">Price: <%= number_to_currency(@product.price) %></p>
+      <p class="card-text">Category: <%= @product.category.name %></p>
+      <p class="card-text">Dealer: <%= @product.dealer.name %></p>
+    </div>
+  </div>
+</div>

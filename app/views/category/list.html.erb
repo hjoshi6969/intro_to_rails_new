@@ -1,0 +1,19 @@
+<br>
+<div class="container mt-5">
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/catogory/index">Home</a></li>
+  <li class="breadcrumb-item"><a href="#">Categories</a></li>
+</ol>
+</nav>
+
+  <% @products.each do |product| %>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><a href='/catogory/show?id=<%= product.id%>' ><%= product.name %></a></h5>
+        <p class="card-text"><%= product.description %></p>
+        <p class="card-text">Price: <%= number_to_currency(product.price) %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
